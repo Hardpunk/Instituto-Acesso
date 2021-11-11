@@ -2,7 +2,8 @@
     <div class="carousel-inner">
         @for($i = 1; $i <= 2; $i++)
             <div class="carousel-item{{ $i === 1 ? ' active' : '' }}">
-                <img src="{{ asset("images/banners/banner{$i}.jpg") }}" class="img-fluid d-block w-100">
+                <img src="{{ asset("images/banners/banner{$i}.jpg") }}" class="img-fluid d-block w-100"
+                     alt="Banner {{ $i }}"/>
             </div>
         @endfor
     </div>

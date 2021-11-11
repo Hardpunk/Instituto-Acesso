@@ -5,21 +5,6 @@
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="trail trail-details">
-                        @if($trilha->slug === 'vendas')
-                            <div class="featured-item"></div>
-                            <div class="wrap">
-                                <div class="ribbon">PROMOÇÃO</div>
-                            </div>
-                            <div class="ribbon-container d-none d-md-block">
-                                <div class="base text-center d-flex flex-column justify-content-center">
-                                    <div class="px-2">
-                                        <p>VALOR PROMOCIONAL</p>
-                                        <p class="mb-1">DE <span class="text-line-through text-muted">R$ {{ number_format($trilha->old_price, 2, ',', '') }}</span></p>
-                                        <p class="mb-0">POR <span class="new-price">R$ {{ number_format($trilha->price, 2, ',', '') }}</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
                         <div class="card">
                             <div class="row flex-align align-items-center h-100">
                                 <div class="col-12 col-md-4 trail--cover__wrapper">
@@ -43,14 +28,6 @@
                                                         @endforeach
                                                     </ul>
                                                 </div>
-                                                @if($trilha->slug === 'vendas')
-                                                <p class="mb-3 py-2 text-center text-discount d-block d-md-none">
-                                                    <span>DE&nbsp;</span>
-                                                    <span class="text-line-through text-muted">R$ {{ number_format($trilha->old_price, 2, ',', '') }}&nbsp;</span>
-                                                    <span>&nbsp;POR&nbsp;</span>
-                                                    <span class="new-price">R$ {{ number_format($trilha->price, 2, ',', '') }}</span>
-                                                </p>
-                                                @endif
                                                 <div class="trail--description__wrapper--button">
                                                     <a href="{{ route('trails.show', $trilha->slug) }}"
                                                        class="btn btn-sm btn-read-more font-weight-bold waves-effect waves-light m-0">

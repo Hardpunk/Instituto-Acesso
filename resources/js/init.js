@@ -215,7 +215,7 @@ $(function () {
         field.mask(maskBehavior.apply({}, arguments), options);
       },
     };
-  let scroll = new SmoothScroll('a[href*="#"]');
+  let scroll = new SmoothScroll('a[href*="#"]', {updateURL: false});
 
   //
   // PLUGINS INITIALIZE

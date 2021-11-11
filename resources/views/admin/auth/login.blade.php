@@ -5,7 +5,7 @@
 @section('content')
     <div class="login-box">
         <!-- /.login-box-body -->
-        <div class="card card-outline card-success">
+        <div class="card card-outline card-warning">
             <div class="card-header text-center">
                 <a href="{{ route('admin.home') }}">
                     <img src="{{ asset('images/logo-small.png') }}" class="img-fluid"/>
@@ -58,7 +58,7 @@
                 </form>
 
                 <p class="mb-0 mt-3">
-                    <a href="{{ route('admin.password.request') }}" class="text-success">{{ __('Forgot Your Password') }}?</a>
+                    <a href="{{ route('admin.password.request') }}" class="text-secondary">{{ __('Forgot Your Password') }}?</a>
                 </p>
 
                 <div class="row">

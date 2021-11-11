@@ -50,8 +50,8 @@
                         <a href="/cursos" class="nav-link">Cursos</a>
                     </li>
 
-                    <li class="nav-item {{ Request::is('contato*') ? 'active' : '' }}">
-                        <a href="/contato" class="nav-link">Contato</a>
+                    <li class="nav-item">
+                        <a href="#contato__wrapper" class="nav-link">Contato</a>
                     </li>
 
                     <li class="nav-item">
@@ -167,8 +167,8 @@
                         <a href="/cursos" class="nav-link">Cursos</a>
                     </li>
 
-                    <li class="nav-item {{ Request::is('contato*') ? 'active' : '' }}">
-                        <a href="/contato" class="nav-link">Contato</a>
+                    <li class="nav-item">
+                        <a href="#contato__wrapper" class="nav-link">Contato</a>
                     </li>
 
                     <li class="nav-item">

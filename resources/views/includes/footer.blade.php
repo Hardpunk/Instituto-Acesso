@@ -34,32 +34,14 @@
                     <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" class="img-fluid">
                 </a>
                 <div class="col-md-12 social-media text-center mt-2">
-                    <a href="https://www.facebook.com/acic.caruaru"> <i class="fab fa-2x fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/AcicCaruaru/"> <i class="fab fa-2x fa-instagram"></i></a>
-                    <a href="https://twitter.com/AcicCaruaru"> <i class="fab fa-2x fa-twitter"></i></a>
+                    <a href="#"> <i class="fab fa-2x fa-facebook"></i></a>
+                    <a href="#"> <i class="fab fa-2x fa-instagram"></i></a>
+                    <a href="#"> <i class="fab fa-2x fa-twitter"></i></a>
                 </div>
             </div>
 
             <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <div class="row align-items-center">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <p class="mb-0">
-                                        <i aria-hidden="true" class="fas fa-phone-volume"></i> Caruaru (PE): (81) 3721-2725
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mt-3 mt-md-0">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <a class="mailto" href="mailto:escoladenegocios@aciccaruaru.com">
-                                        <i aria-hidden="true" class="far fa-envelope-open"></i>
-                                        escoladenegocios@aciccaruaru.com</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-md-12">
                         <div class="row align-items-center">
                             <div class="col-md-4">
@@ -73,7 +55,7 @@
 
                             <div class="col-md-4">
                                 <a target="_blank"
-                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.escoladenegociosacic.com&hl=pt_BR">
+                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.institutoacesso.com.br&hl=pt_BR">
                                     <img class="img-fluid" src="/images/site-seguro.png" alt="Selo site seguro">
                                 </a>
                             </div>
@@ -87,10 +69,10 @@
     <div class="subfooter container-fluid py-4">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">ACIC - Associação Comercial e Empresarial de Caruaru</h5>
+                <h5 class="font-weight-bold mb-3">Instituto Acesso</h5>
                 <h5 class="mb-3">Rua Armando da Fonte, 15 - 2°
-                    Andar - Mauricio de Nassau | CEP 55012-025 | Caruaru - PE</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (81) 3721-2725</h3>
+                    Andar - Mauricio de Nassau | CEP 55012-025 | Goiânia - GO</h5>
+                <h3 class="font-weight-bold mb-0">Fone: (62) 99144-3951</h3>
             </div>
         </div>
     </div>
