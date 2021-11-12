@@ -47,6 +47,7 @@ Route::prefix('painel')->name('admin.')->group(
                         );
                         Route::resource('payments', 'PaymentController')->only(['index', 'show']);
                         Route::resource('coupons', 'CouponController');
+                        Route::resource('banners', 'BannerController');
                         Route::resource('newsletters', 'NewsletterController')->only(['index', 'destroy']);
                         Route::resource('contacts', 'ContactController')->only(['index', 'show', 'destroy']);
                     }
