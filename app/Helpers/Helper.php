@@ -377,3 +377,21 @@ if (!function_exists('round_down')) {
         return number_format($rounded, 2, ',', '.');
     }
 }
+
+if (!function_exists('format_phone')) {
+    /**
+     * @param $phone
+     * @return mixed|string
+     */
+    function format_phone($phone)
+    {
+        $formatedPhone = preg_replace('/[^0-9]/', '', $phone);
+        $matches = [];
+        preg_match('/^([0-9]{2})([0-9]{4,5})([0-9]{4})$/', $formatedPhone, $matches);
+        if ($matches) {
+            return '('.$matches[1].') '.$matches[2].'-'.$matches[3];
+        }
+
+        return $phone;
+    }
+}

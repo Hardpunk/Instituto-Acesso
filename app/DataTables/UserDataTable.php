@@ -18,7 +18,13 @@ class UserDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'users.datatables_actions');
+        return $dataTable->addColumn('action', 'users.datatables_actions')
+            ->editColumn('profile.document_number', function($request) {
+                return format_cpf_cnpj($request->profile->document_number);
+            })
+            ->editColumn('profile.phone', function($request) {
+                return format_phone($request->profile->phone);
+            });
     }
 
     /**
@@ -107,7 +113,7 @@ class UserDataTable extends DataTable
             ],
             'created_at' => [
                 'data' => 'created_at',
-                'title' => 'Data criação',
+                'title' => 'Registrado em',
                 'width' => '150px',
                 'searchable' => false,
                 'orderable' => true,
