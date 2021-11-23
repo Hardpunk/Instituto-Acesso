@@ -115,7 +115,7 @@
                                                                     <tr>
                                                                         <td
                                                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;">
-                                                                            <a href="https://www.sie.com.br/acicescoladenegocios"
+                                                                            <a href="https://www.sie.com.br/institutoacesso"
                                                                                 class="button button-acim"
                                                                                 target="_blank"
                                                                                 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16); color: #ffffff; display: inline-block; text-decoration: none; -webkit-text-size-adjust: none; background-color: #0c6c4f; border-top: 10px solid #0c6c4f; border-right: 18px solid #0c6c4f; border-bottom: 10px solid #0c6c4f; border-left: 18px solid #0c6c4f;">{{ config('app.name') }}</a>
@@ -147,7 +147,7 @@
                                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 0;">
                                                                         <p
                                                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 0; text-align: center; margin-bottom: 0; padding-bottom: 0;">
-                                                                            https://www.sie.com.br/acicescoladenegocios</p>
+                                                                            https://www.sie.com.br/institutoacesso</p>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
@@ -164,15 +164,15 @@
 
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 15px; text-align: center;">
-                                            <a href="mailto:escoladenegocios@aciccaruaru.com" title="escoladenegocios@aciccaruaru.com"
+                                            <a href="mailto:{{ config('app.email_reply_to') }}" title="{{ config('app.email_reply_to') }}"
                                                 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: center; display: inline-block;"
                                                 target="_blank">
-                                                escoladenegocios@aciccaruaru.com
+                                                {{ config('app.email_reply_to') }}
                                             </a>
                                         </p>
                                         <p
                                             style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: center;">
-                                            <a href="https://wa.me/5561998842889" title="Atendimento 1 (61) 99884-2889"
+                                            <a href="https://wa.me/5562981154676" title="Atendimento (62) 98115-4676"
                                                 style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; vertical-align: middle; text-align: center; display: inline-block;"
                                                 target="_blank">Whatsapp
                                             </a>

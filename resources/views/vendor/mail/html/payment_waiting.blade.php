@@ -97,11 +97,11 @@
                                                 <td align="center" valign="top">
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 15px; text-align: left;">
-                                                        <span>escoladenegocios@aciccaruaru.com</span>
+                                                        <span>contato@institutoacesso.com.br</span>
                                                     </p>
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: left;">
-                                                        <span>Whatsapp - (61) 99884-2889</span>
+                                                        <span>Whatsapp - (62) 98115-4676</span>
                                                     </p>
                                                 </td>
                                             </tr>

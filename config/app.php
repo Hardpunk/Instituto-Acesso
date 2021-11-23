@@ -129,6 +129,8 @@ return [
 
     'iped_group' => env('IPED_GROUP'),
 
+    'email_reply_to' => env('MAIL_REPLY_TO'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

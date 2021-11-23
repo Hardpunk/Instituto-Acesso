@@ -34,9 +34,8 @@
                     <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" class="img-fluid">
                 </a>
                 <div class="col-md-12 social-media text-center mt-2">
-                    <a href="#"> <i class="fab fa-2x fa-facebook"></i></a>
-                    <a href="#"> <i class="fab fa-2x fa-instagram"></i></a>
-                    <a href="#"> <i class="fab fa-2x fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/institutoacesso.dc"> <i class="fab fa-2x fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/institutoacesso.dc"> <i class="fab fa-2x fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -69,10 +68,9 @@
     <div class="subfooter container-fluid py-4">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">Instituto Acesso</h5>
-                <h5 class="mb-3">Rua Armando da Fonte, 15 - 2°
-                    Andar - Mauricio de Nassau | CEP 55012-025 | Goiânia - GO</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (62) 99144-3951</h3>
+                <h5 class="font-weight-bold mb-3">Instituto Acesso - Desenvolvimento de Carreiras</h5>
+                <h5 class="mb-3">Goiânia - GO</h5>
+                <h3 class="font-weight-bold mb-0">Fone: (62) 98115-4676</h3>
             </div>
         </div>
     </div>
@@ -120,9 +118,8 @@
                                 </a>
                             </div>
                             <div class="col-md-12 social-media text-aling-center mt-3">
-                                <a href="https://www.facebook.com/acic.caruaru"> <i class="fab fa-2x fa-facebook"></i></a>
-                                <a href="https://www.instagram.com/AcicCaruaru/"> <i class="fab fa-2x fa-instagram"></i></a>
-                                <a href="https://twitter.com/AcicCaruaru"> <i class="fab fa-2x fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/institutoacesso.dc"> <i class="fab fa-2x fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/institutoacesso.dc"> <i class="fab fa-2x fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -139,7 +136,7 @@
 
                             <div class="col-6 offset-3 offset-sm-0 col-sm-4 mb-3 mb-sm-0">
                                 <a target="_blank"
-                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.escoladenegociosacic.com&hl=pt_BR">
+                                   href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fwww.institutoacesso.com.br&hl=pt_BR">
                                     <img class="img-fluid" src="/images/site-seguro.png" alt="Selo site seguro">
                                 </a>
                             </div>
@@ -153,10 +150,9 @@
     <div class="subfooter container-fluid py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h5 class="font-weight-bold mb-3">ACIC - Associação Comercial e Empresarial de Caruaru</h5>
-                <h5 class="mb-3">Rua Armando da Fonte, 15 - 2°
-                    Andar - Mauricio de Nassau | CEP 55012-025 | Caruaru - PE</h5>
-                <h3 class="font-weight-bold mb-0">Fone: (81) 3721-2725</h3>
+                <h5 class="font-weight-bold mb-3">Instituto Acesso - Desenvolvimento de Carreiras</h5>
+                <h5 class="mb-3">Goiânia- GO</h5>
+                <h3 class="font-weight-bold mb-0">Fone: (62) 98115-4676</h3>
             </div>
         </div>
     </div>
