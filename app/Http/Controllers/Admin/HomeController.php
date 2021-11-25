@@ -35,7 +35,9 @@ class HomeController extends Controller
     public function index()
     {
         $user = $this->user;
-        $payments = Payment::where('status', '=', 'paid');
+        $payments = Payment::where('status', '=', 'paid')
+            ->whereYear('created_at', '=', date('Y'))
+            ->whereMonth('created_at', '=', date('m'));
         $paymentsTotalAmount = $payments->sum('amount');
         $paymentsCount = $payments->count();
         $registeredUsersCount = User::count();

@@ -35,12 +35,13 @@
                     <div class="inner">
                         <h3>{{ $paymentsCount }}</h3>
 
-                        <p>Total vendas</p>
+                        <p>Total vendas ({{ ucfirst(strftime('%B')) }})</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="{{ route('admin.payments.index') }}" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('admin.payments.index') }}" class="small-box-footer">Mais informações <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -48,13 +49,16 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3><span style="font-size: 20px">R$</span> {{ number_format($paymentsTotalAmount, 2, ',', '.') }}</h3>
-                        <p>Total receitas</p>
+                        <h3><span
+                                style="font-size: 20px">R$</span> {{ number_format($paymentsTotalAmount, 2, ',', '.') }}
+                        </h3>
+                        <p>Total receitas ({{ ucfirst(strftime('%B')) }})</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="{{ route('admin.payments.index') }}" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('admin.payments.index') }}" class="small-box-footer">Mais informações <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -68,7 +72,8 @@
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="{{ route('admin.users.index') }}" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('admin.users.index') }}" class="small-box-footer">Mais informações <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -82,7 +87,8 @@
                     <div class="icon">
                         <i class="ion ion-university"></i>
                     </div>
-                    <a href="{{ route('admin.users.registered') }}" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="{{ route('admin.users.registered') }}" class="small-box-footer">Mais informações <i
+                            class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
