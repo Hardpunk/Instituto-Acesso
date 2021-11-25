@@ -34,6 +34,7 @@ class PaymentWaiting extends Mailable
     {
         return $this->from(env('MAIL_FROM_ADDRESS'))
             ->to($this->user->email, $this->user->name)
+            ->replyTo(config('app.email_reply_to'))
             ->subject('Aguardando confirmação de pagamento')
             ->view('vendor.mail.html.payment_waiting')
             ->with(['user' => $this->user]);

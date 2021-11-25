@@ -97,7 +97,7 @@
                                                 <td align="center" valign="top">
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; margin-top: 15px; text-align: left;">
-                                                        <span>contato@institutoacesso.com.br</span>
+                                                        <span>{{ config('app.email_reply_to') }}</span>
                                                     </p>
                                                     <p
                                                         style="font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #74787e; font-size: 14px; line-height: 1.5em; text-align: left;">
