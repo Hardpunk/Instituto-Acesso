@@ -31,6 +31,10 @@ Route::prefix('painel')->name('admin.')->group(
 
                         Route::post('/password/reset', 'Auth\ResetPasswordController@reset')
                             ->name('password.update');
+
+                        Route::fallback(function() {
+                            return redirect(route('admin.login'));
+                        });
                     }
                 );
 
@@ -50,6 +54,10 @@ Route::prefix('painel')->name('admin.')->group(
                         Route::resource('banners', 'BannerController');
                         Route::resource('newsletters', 'NewsletterController')->only(['index', 'destroy']);
                         Route::resource('contacts', 'ContactController')->only(['index', 'show', 'destroy']);
+
+                        Route::fallback(function() {
+                            return redirect(route('admin.home'));
+                        });
                     }
                 );
             }
