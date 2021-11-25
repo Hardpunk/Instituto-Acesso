@@ -165,7 +165,9 @@
 
         @include('pages.cursos._course-topics')
 
-        @include('pages.cursos._course-teacher')
+        @if($curso->teacher_image)
+            @include('pages.cursos._course-teacher')
+        @endif
 
         @include('pages.cursos._course-price')
     </section>

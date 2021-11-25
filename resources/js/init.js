@@ -112,7 +112,7 @@ function click_removeCartItem(event) {
     $item = $this.closest(".cart-item__box"),
     type = $this.data("itemType"),
     id = $this.data("itemId"),
-    cartItems = parseInt($(".cart-items").text());
+    cartItems = parseInt($(".cart-items:visible").text());
 
   $.ajax({
     url: `/ajax/cart/remove/${type}/${id}`,
@@ -128,7 +128,11 @@ function click_removeCartItem(event) {
           $(this).remove();
         });
 
-        $(".cart-items").text(--cartItems);
+        if ((--cartItems) <= 0) {
+          cartItems = 0;
+        }
+
+        $(".cart-items").text(cartItems);
 
         if (cartItems === 0) {
           // $('.cart-details__wrapper').remove();

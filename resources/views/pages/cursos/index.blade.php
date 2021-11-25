@@ -13,9 +13,8 @@
 @section('content')
     @include('pages.partials._lista-categorias')
 
-    <section class="cursos pb-5">
-        <div class="container">
-            <div id="customize-categorias" class="row py-3">
+    <section class="cursos pb-5 container-lg">
+        <div id="customize-categorias" class="row py-3">
                 @if(count($categorias) > 0)
                     @foreach($categorias as $categoria)
                         <div class="col-12 col-sm-6 col-md-4 category-item">
@@ -41,6 +40,5 @@
                 </div>
                 @endif
             </div>
-        </div>
     </section>
 @endsection

@@ -556,7 +556,7 @@ class CheckoutController extends Controller
     public function addCoupon(Request $request)
     {
         $cookie = [];
-        $expires = 60 * 24 * 30;
+        $expires = 60 * 24 * 1;
 
         $coupon = $this->checkCoupon($request->code);
         $type = $request->get('type', 'course');

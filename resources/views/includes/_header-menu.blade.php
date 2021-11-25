@@ -51,7 +51,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contato__wrapper" class="nav-link">Contato</a>
+                        <a href="/#contato__wrapper" class="nav-link">Contato</a>
                     </li>
 
                     <li class="nav-item">
@@ -168,7 +168,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#contato__wrapper" class="nav-link">Contato</a>
+                        <a href="/#contato__wrapper" class="nav-link">Contato</a>
                     </li>
 
                     <li class="nav-item">
