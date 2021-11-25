@@ -59,7 +59,7 @@ class CourseController extends IpedAPIController
         $categorias = Category::all();
 
         if (!strpos($curso->teacher_image, '.jpg') && !check_remote_file($curso->teacher_image)) {
-            $curso->teacher_image = asset('images/default.png');
+            $curso->teacher_image = "";
         }
 
         $in_cart = false;
