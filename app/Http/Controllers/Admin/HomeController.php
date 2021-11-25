@@ -48,7 +48,65 @@ class HomeController extends Controller
         })
             ->groupBy('users.id')
             ->count();
+        $totalAnualRevenue = $this->getAnualRevenue();
+        $totalAnualSales = $this->getAnualSales();
+
         return view('home',
-            compact('user', 'paymentsCount', 'paymentsTotalAmount', 'registeredUsersCount', 'enroledUsersCount'));
+            compact('user', 'paymentsCount', 'paymentsTotalAmount', 'registeredUsersCount', 'enroledUsersCount',
+                'totalAnualRevenue', 'totalAnualSales'));
+    }
+
+    /**
+     * Get anual revenue by months
+     *
+     * @return array
+     */
+    private function getAnualRevenue(): array
+    {
+        $arrayMonths = [];
+        foreach (range(1, 12) as $month) {
+            $arrayMonths[$month] = ['month' => $month, 'monthlyAmount' => 0];
+        }
+
+        $today = Carbon::now();
+        $firstDayOfYear = $today->copy()->startOfYear()->format('Y-m-d');
+        $lastDayOfYear = $today->copy()->endOfYear()->format('Y-m-d');
+        $arrayMonthlyRevenue = Payment::selectRaw('MONTH(created_at) as month, SUM(amount) as monthlyAmount')
+            ->where('status', 'paid')
+            ->whereBetween('created_at', [$firstDayOfYear, $lastDayOfYear])
+            ->groupBy('month')
+            ->orderBy('month')
+            ->get()
+            ->keyBy('month')
+            ->toArray();
+
+        return array_replace($arrayMonths, $arrayMonthlyRevenue);
+    }
+
+    /**
+     * Get anual sales by months
+     *
+     * @return array
+     */
+    private function getAnualSales(): array
+    {
+        $arrayMonths = [];
+        foreach (range(1, 12) as $month) {
+            $arrayMonths[$month] = ['month' => $month, 'sales' => 0];
+        }
+
+        $today = Carbon::now();
+        $firstDayOfYear = $today->copy()->startOfYear()->format('Y-m-d');
+        $lastDayOfYear = $today->copy()->endOfYear()->format('Y-m-d');
+        $arrayMonthlySales = Payment::selectRaw('MONTH(created_at) as month, count(*) as sales')
+            ->where('status', 'paid')
+            ->whereBetween('created_at', [$firstDayOfYear, $lastDayOfYear])
+            ->groupBy('month')
+            ->orderBy('month')
+            ->get()
+            ->keyBy('month')
+            ->toArray();
+
+        return array_replace($arrayMonths, $arrayMonthlySales);
     }
 }
