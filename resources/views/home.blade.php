@@ -190,6 +190,7 @@
                     yAxes: {
                         [0]: {
                             ticks: {
+                                beginAtZero: true,
                                 stepSize: 10,
                                 maxTicksLimit: 10,
                                 callback: function(value, index, values) {
@@ -240,6 +241,7 @@
                     yAxes: {
                         [0]: {
                             ticks: {
+                                beginAtZero: true,
                                 stepSize: 1,
                                 maxTicksLimit: 10,
                             },

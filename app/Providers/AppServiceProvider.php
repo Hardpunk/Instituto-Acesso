@@ -26,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        setlocale(LC_ALL, 'pt-BR.UTF-8');
+        setlocale(LC_ALL, 'pt-BR.UTF-8', 'pt-BR.UTF-8');
     }
 }
