@@ -29,7 +29,7 @@
                 {{ $payment->user->profile->street }}, Nº {{ $payment->user->profile->number }}<br>
                 {{ $payment->user->profile->neighborhood }}, {{ $payment->user->profile->city }}
                 - {{ $payment->user->profile->state }}<br>
-                {{ $payment->user->profile->zipcode }}<br>
+                {{ format_zipcode($payment->user->profile->zipcode) }}<br>
                 @if($payment->user->profile->complement)
                     Complemento: {{ $payment->user->profile->complement }}
                 @endif
@@ -64,6 +64,7 @@
         </div>
     </div>
 
+    @if(count($payment->items()) > 0)
     <div class="row">
         <div class="col-12">
             <div class="table-responsive">
@@ -104,6 +105,7 @@
         <!-- /.col -->
     </div>
     <!-- /.row -->
+    @endif
 
     <!-- this row will not appear when printing -->
     <div class="row no-print">

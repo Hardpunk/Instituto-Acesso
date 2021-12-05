@@ -395,3 +395,21 @@ if (!function_exists('format_phone')) {
         return $phone;
     }
 }
+
+if (!function_exists('format_zipcode')) {
+    /**
+     * @param $zipcode
+     * @return mixed|string
+     */
+    function format_zipcode($zipcode)
+    {
+        $formatedZipcode = preg_replace('/[^0-9]/', '', $zipcode);
+        $matches = [];
+        preg_match('/^([0-9]{5})([0-9]{3})$/', $formatedZipcode, $matches);
+        if ($matches) {
+            return $matches[1].'-'.$matches[2];
+        }
+
+        return $zipcode;
+    }
+}
