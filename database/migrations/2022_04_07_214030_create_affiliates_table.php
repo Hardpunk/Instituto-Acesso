@@ -18,6 +18,7 @@ class CreateAffiliatesTable extends Migration
             $table->string('name');
             $table->string('slug')->unique('slug_unique_idx');
             $table->integer('times_used')->default(0);
+            $table->decimal('commission',5)->default(0);
             $table->timestamps();
         });
     }

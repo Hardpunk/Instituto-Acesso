@@ -48,6 +48,7 @@ Route::prefix('painel')->name('admin.')->group(function () {
             Route::resource('newsletters', 'NewsletterController')->only(['index', 'destroy']);
             Route::resource('contacts', 'ContactController')->only(['index', 'show', 'destroy']);
             Route::resource('affiliates', 'AffiliateController')->except(['show']);
+            Route::get('affiliates/{affiliate}', 'AffiliateController@show')->name('affiliates.show');
 
             Route::fallback(function() {
                 return redirect(route('admin.home'));

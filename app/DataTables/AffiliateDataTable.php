@@ -98,7 +98,7 @@ class AffiliateDataTable extends DataTable
             ],
             'times_used' => [
                 'data' => 'times_used',
-                'title' => 'Qtdes. usadas',
+                'title' => 'Núm. vendas',
                 'width' => '180px',
                 'searchable' => false,
                 'orderable' => false,

@@ -24,6 +24,7 @@ class Affiliate extends Model
     public $fillable = [
         'name',
         'slug',
+        'commission',
         'times_used'
     ];
 
@@ -47,6 +48,7 @@ class Affiliate extends Model
     public static $rules = [
         'name' => 'required',
         'slug' => 'required|unique:affiliates,slug',
+        'commission' => 'required',
     ];
 
     /**
@@ -55,5 +57,16 @@ class Affiliate extends Model
     public function payments()
     {
         return $this->hasMany(Payment::class, 'affiliate_id');
+    }
+
+    public function sumTotalSales()
+    {
+        $total = 0;
+
+        if ($this->payments->count() > 0) {
+            $total = array_sum(array_column($this->payments->toArray(), 'amount'));
+        }
+
+        return $total;
     }
 }

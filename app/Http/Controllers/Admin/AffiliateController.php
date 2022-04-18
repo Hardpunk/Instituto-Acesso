@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Affiliate;
 use App\DataTables\AffiliateDataTable;
 use App\Http\Controllers\AppBaseController;
 use App\Http\Requests\CreateAffiliateRequest;
@@ -9,6 +10,8 @@ use App\Http\Requests\UpdateAffiliateRequest;
 use App\Repositories\AffiliateRepository;
 use Auth;
 use Flash;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 class AffiliateController extends AppBaseController
@@ -65,11 +68,11 @@ class AffiliateController extends AppBaseController
     /**
      * Display the specified Affiliate.
      *
-     * @param  int $id
-     *
-     * @return Response
+     * @param int $id
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function show($id)
+    public function show(int $id, Request $request)
     {
         $user = Auth::user();
         $affiliate = $this->affiliateRepository->find($id);
@@ -80,13 +83,36 @@ class AffiliateController extends AppBaseController
             return redirect(route('admin.affiliates.index'));
         }
 
-        return view('admin.affiliates.show', compact('affiliate', 'user'));
+        $years = DB::table('payments')
+            ->selectRaw("YEAR(created_at) as 'years'")
+            ->groupBy('years')
+            ->pluck('years', 'years');
+
+        $year = $request->get('year', date('Y'));
+        $month = $request->get('month');
+
+        $affiliate = Affiliate::with([
+            'payments' => function ($q) use ($year, $month) {
+                $q->whereYear('payments.created_at', $year);
+                if (!is_null($month)) {
+                    $q->whereMonth('payments.created_at', $month);
+                }
+                return $q;
+            },
+            'payments.user',
+            'payments.trails',
+            'payments.courses'
+        ])
+            ->where('id', $id)
+            ->first();
+
+        return view('admin.affiliates.show', compact('affiliate', 'month', 'user', 'year', 'years'));
     }
 
     /**
      * Show the form for editing the specified Affiliate.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return Response
      */
@@ -107,7 +133,7 @@ class AffiliateController extends AppBaseController
     /**
      * Update the specified Affiliate in storage.
      *
-     * @param  int              $id
+     * @param int $id
      * @param UpdateAffiliateRequest $request
      *
      * @return Response
@@ -130,7 +156,7 @@ class AffiliateController extends AppBaseController
     /**
      * Remove the specified Affiliate from storage.
      *
-     * @param  int $id
+     * @param int $id
      *
      * @return Response
      */

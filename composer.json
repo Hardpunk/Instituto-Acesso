@@ -30,7 +30,8 @@
     "yajra/laravel-datatables-buttons": "^4.13",
     "yajra/laravel-datatables-html": "^4.38",
     "yajra/laravel-datatables-oracle": "^9.18",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-curl": "*"
   },
   "require-dev": {
     "barryvdh/laravel-ide-helper": "^2.10",
